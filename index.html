@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Gaming Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loading-animation">
+            <div class="loading-bar"></div>
+            <div class="loading-text">LOADING...</div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+
+    <!-- Background Music Toggle -->
+    <div class="music-toggle">
+        <i class="fas fa-music"></i>
+        <span>MUSIC</span>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header/Navigation -->
+        <header class="header">
+            <div class="logo">
+                <span class="logo-text">NEON</span>
+                <span class="logo-glow"></span>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#" class="nav-link active" data-section="home">HOME</a></li>
+                    <li><a href="#" class="nav-link" data-section="games">GAMES</a></li>
+                    <li><a href="#" class="nav-link" data-section="leaderboard">LEADERBOARD</a></li>
+                    <li><a href="#" class="nav-link" data-section="about">ABOUT</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main Content Sections -->
+        <main class="main-content">
+            <!-- Home Section -->
+            <section class="content-section active" id="home">
+                <div class="hero">
+                    <h1 class="hero-title">WELCOME TO <span>NEON GAMING HUB</span></h1>
+                    <p class="hero-subtitle">Experience the future of gaming with our cutting-edge platform</p>
+                    <button class="btn-explore">EXPLORE GAMES</button>
+                </div>
+                <div class="particles" id="particles-js"></div>
+            </section>
+
+            <!-- Games Section -->
+            <section class="content-section" id="games">
+                <h2 class="section-title">OUR GAMES</h2>
+                <div class="games-grid">
+                    <div class="game-card" data-game="memory">
+                        <div class="game-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Memory Match</h3>
+                        <p>Test your memory with this neon-themed card matching game</p>
+                        <button class="btn-play">PLAY NOW</button>
+                    </div>
+                    <div class="game-card" data-game="snake">
+                        <div class="game-icon">
+                            <i class="fas fa-snake"></i>
+                        </div>
+                        <h3>Neon Snake</h3>
+                        <p>Classic snake game with a futuristic twist</p>
+                        <button class="btn-play">PLAY NOW</button>
+                    </div>
+                    <div class="game-card" data-game="typing">
+                        <div class="game-icon">
+                            <i class="fas fa-keyboard"></i>
+                        </div>
+                        <h3>Speed Typing</h3>
+                        <p>How fast can you type? Prove your skills!</p>
+                        <button class="btn-play">PLAY NOW</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Game Screens -->
+            <div class="game-screen" id="memory-game">
+                <div class="game-container">
+                    <div class="game-header">
+                        <h2>MEMORY MATCH</h2>
+                        <div class="game-stats">
+                            <div class="score">SCORE: <span>0</span></div>
+                            <div class="timer">TIME: <span>60</span>s</div>
+                        </div>
+                    </div>
+                    <div class="memory-board" id="memory-board"></div>
+                    <div class="game-controls">
+                        <button class="btn-restart">RESTART</button>
+                        <button class="btn-exit">EXIT GAME</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Leaderboard Section -->
+            <section class="content-section" id="leaderboard">
+                <h2 class="section-title">LEADERBOARD</h2>
+                <div class="leaderboard-container">
+                    <div class="leaderboard-tabs">
+                        <button class="tab-btn active" data-game="memory">Memory Match</button>
+                        <button class="tab-btn" data-game="snake">Neon Snake</button>
+                        <button class="tab-btn" data-game="typing">Speed Typing</button>
+                    </div>
+                    <div class="leaderboard-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>RANK</th>
+                                    <th>PLAYER</th>
+                                    <th>SCORE</th>
+                                    <th>DATE</th>
+                                </tr>
+                            </thead>
+                            <tbody id="leaderboard-data">
+                                <!-- Filled by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section class="content-section" id="about">
+                <h2 class="section-title">ABOUT US</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Welcome to Neon Gaming Hub, where cutting-edge technology meets immersive gaming experiences.</p>
+                        <p>Our platform is designed for gamers who appreciate sleek design, smooth animations, and challenging gameplay.</p>
+                        <p>All our games are built with modern web technologies and optimized for both desktop and mobile devices.</p>
+                    </div>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-bolt"></i>
+                            <h3>Fast Performance</h3>
+                            <p>Optimized for smooth gameplay</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-mobile-alt"></i>
+                            <h3>Responsive Design</h3>
+                            <p>Play anywhere on any device</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-trophy"></i>
+                            <h3>Competitive</h3>
+                            <p>Leaderboards to track your progress</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span>NEON GAMING HUB</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Contact Us</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                &copy; 2023 Neon Gaming Hub. All rights reserved.
+            </div>
+        </footer>
+    </div>
+
+    <!-- Audio Elements -->
+    <audio id="click-sound" src="assets/sounds/click.wav" preload="auto"></audio>
+    <audio id="game-start-sound" src="assets/sounds/game-start.wav" preload="auto"></audio>
+    <audio id="game-win-sound" src="assets/sounds/win.wav" preload="auto"></audio>
+    <audio id="game-lose-sound" src="assets/sounds/lose.wav" preload="auto"></audio>
+    <audio id="card-flip-sound" src="assets/sounds/card-flip.wav" preload="auto"></audio>
+    <audio id="match-sound" src="assets/sounds/match.wav" preload="auto"></audio>
+    <audio id="background-music" loop src="assets/sounds/background-music.mp3" preload="auto"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
